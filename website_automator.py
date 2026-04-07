@@ -1,10 +1,12 @@
-# to import a updated pip [pip install webbrowser] C:\Users\rinnn\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip
+#Imports the sys module, which gives access to command-line arguments and system functions like exiting the script.
+
+# Imports the webbrowser module, which lets Python control and open URLs in your default browser.  -  to import a updated pip [pip install webbrowser] C:\Users\rinnn\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip
 
 import sys
 import webbrowser
 
 
-# These are the URLs that will be used in the script
+# Defines a dictionary called URLS with two named sets of links — "work" and "personal". Each key maps to a list of URLs you want opened together. - These are the URLs that will be used in the script
 URLS = {
     "work": ["https://www.github.com", "https://www.google.com"],
     "personal": ["https://www.facebook.com", "https://www.spotify.com", "https://www.youtube.com"]
