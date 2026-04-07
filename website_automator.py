@@ -13,13 +13,11 @@ URLS = {
     "personal": ["https://www.facebook.com", "https://www.spotify.com", "https://www.youtube.com"]
 }
 
-
 # Defines a function that takes a list of URLs and loops through each one, opening it in a new browser tab.
 
 def open_webpages(urls):
     for url in urls:
         webbrowser.open_new_tab(url)
-
 
 # This is a Python convention — the code inside only runs if you execute this file directly (not if it's imported as a module by another script).
 
