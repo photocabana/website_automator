@@ -28,12 +28,22 @@ if __name__ == "__main__":
     # Checks two things: (1) that exactly one argument was passed when running the script (the script name itself is always sys.argv[0], so len == 2 means one extra argument), and (2) that the argument matches a key in URLS. If either check fails, it shows usage instructions.
     
     if len(sys.argv) != 2 or sys.argv[1] not in URLS:
+        
+        # Prints a helpful error message showing how to use the script and lists the available set names (work, personal).
+        
         print("Usage: python script.py <set_name>")
         print("Available sets:")
         for set_name in URLS.keys():
             print(f"- {set_name}")
+            
+            # Exits the script with error code 1, signaling that something went wrong.
+            
         sys.exit(1)
+        
+# If the input was valid, this grabs the argument you passed (e.g. "work"), looks up its URL list in the dictionary, and calls the function to open all those tabs.
 
     set_name = sys.argv[1]
     urls = URLS[set_name]
     open_webpages(urls)
+
+# In plain English: you run this script from the terminal like python script.py work, and it opens all your "work" URLs in new browser tabs at once. It's a handy productivity launcher!
